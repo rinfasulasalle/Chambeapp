@@ -10,10 +10,10 @@ Este repositorio contiene el código fuente y la documentación para nuestro pro
 
 ## Integrantes del Equipo
 
-- [Nombre del Integrante 1]
-- [Nombre del Integrante 2]
-- [Nombre del Integrante 3]
-- [Nombre del Integrante 4]
+- Roger Infa Sanchez.
+- Aron Josue Hurtado Cruz.
+- Kristhyan Andree Kurt Lazarte Zubia.
+- Kevin Joel Linares Salinas.
 
 ## Estructura del Repositorio
 
