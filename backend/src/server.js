@@ -9,5 +9,5 @@ app.use("/api", routes);
 
 const PORT = 3000;
 app.listen(PORT, () => {
-  console.log(`Servidor en ejecución en el puerto ${PORT}`);
+  console.log(`Servidor en ejecución: http://localhost:${PORT}`);
 });
