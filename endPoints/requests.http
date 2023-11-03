@@ -1,0 +1,26 @@
+###
+POST http://localhost:9000/api/chats HTTP/1.1
+Content-Type: application/json
+
+{
+  "participantes": ["Usuario2", "Usuario3"],
+  "content": ["Hola bro, qué cuentas?"]
+}
+
+###
+GET http://localhost:9000/api/chats HTTP/1.1
+
+###
+GET http://localhost:9000/api/chats/65451ae9ad4ce4d6dae3e3f5 HTTP/1.1
+
+###
+PUT http://localhost:9000/api/chats/65451ae9ad4ce4d6dae3e3f5 HTTP/1.1
+Content-Type: application/json
+
+{
+  "participantes": ["Usuario1", "Usuario2"],
+  "content": ["Hola man, este mi nuevo chat xd (actualizado)"]
+}
+
+###
+DELETE http://localhost:9000/api/chats/65451ae9ad4ce4d6dae3e3f5 HTTP/1.1  
