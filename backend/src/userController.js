@@ -1,5 +1,30 @@
 const User = require("./user");
+const jwt = require("jsonwebtoken");
 
+// Función para generar un token JWT
+function generateToken(user) {
+  return jwt.sign({ userId: user._id }, "t0k3n", {
+    expiresIn: "1h",
+  });
+}
+
+// Controlador para el inicio de sesión y generación del token
+exports.login = async (req, res) => {
+  const { username, password } = req.body;
+
+  try {
+    const user = await User.findOne({ username, password });
+
+    if (!user) {
+      return res.status(401).json({ error: "Credenciales incorrectas" });
+    }
+
+    const token = generateToken(user);
+    res.status(200).json({ token });
+  } catch (error) {
+    res.status(500).json({ error: "Error en el servidor" });
+  }
+};
 // Controlador para crear un nuevo usuario
 exports.createUser = async (req, res) => {
   try {

@@ -5,7 +5,9 @@ const routes = require("./routes");
 const app = express();
 
 app.use(bodyParser.json());
-app.use("/api", routes);
+
+// Aplica el middleware de autenticación antes de las rutas
+app.use("/api", authenticateToken, routes);
 
 const PORT = 3000;
 app.listen(PORT, () => {
