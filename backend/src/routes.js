@@ -3,7 +3,13 @@ const router = express.Router();
 const authenticateToken = require("./authenticateToken");
 const userController = require("./userController");
 
-router.use(authenticateToken); // Aplica el middleware de autenticación a todas las rutas siguientes
+// Middleware de autenticación
+router.use((req, res, next) => {
+  if (req.path === "/login") {
+    return next(); // Salta de autenticación
+  }
+  authenticateToken(req, res, next);
+});
 
 // Rutas protegidas por token
 router.post("/users", userController.createUser);

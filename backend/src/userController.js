@@ -25,6 +25,7 @@ exports.login = async (req, res) => {
     res.status(500).json({ error: "Error en el servidor" });
   }
 };
+
 // Controlador para crear un nuevo usuario
 exports.createUser = async (req, res) => {
   try {
