@@ -1,15 +1,14 @@
 const express = require('express');
 const mongoose = require("mongoose");
 require("dotenv").config();
-const postRoutes = require("./routes/post");
+const routesGroup = require("./routes/group_routes");
 
 const app = express();
-const port= process.env.PORT || 9000;
+const port= process.env.PORT;
 
 //middlewares
 app.use(express.json());
-app.use('/api', postRoutes);
-
+app.use('/api', routesGroup);
 
 //routes
 app.get('/',(req, res)=>{
@@ -22,4 +21,4 @@ mongoose
     .then(()=>console.log("Connected to MongoDB Atlas"))
     .catch((error)=>console.error(error));
 
-app.listen(port, ()=> console.log('server liistenig on port', port));
+app.listen(port, ()=> console.log('server listening on port', port));
