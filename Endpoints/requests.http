@@ -1,40 +1,48 @@
 ###
-POST http://localhost:9000/api/posts HTTP/1.1
+POST http://localhost:8000/api/groups HTTP/1.1
 Content-Type: application/json
 
 {
-    "user_id": "02",
-    "title": "Oferta de trabajo: Ingeniero de Software Senior",
-    "content": "Estamos buscando un ingeniero de software senior con experiencia en desarrollo de aplicaciones empresariales. El candidato ideal deberá tener experiencia en Java, Spring Framework y bases de datos SQL. ¡Únete a nuestro equipo y trabaja en proyectos desafiantes!",
-    "src_image": "https://ejemplo.com/imagen_oferta_trabajo.png",  
-    "comments": [
-        "Tengo experiencia en Java y Spring. ¿Cuál es el proceso de selección?",
-        "¿Cuál es el rango salarial para este puesto?"
-    ],
-    "status": true
+  "users": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F"
+  ],
+  "title": "Newbie",
+  "image": null,
+  "description": "Grupo de los usuarios nóveles",
+  "status": true
 }
 
 ###
-GET http://localhost:9000/api/posts HTTP/1.1
+GET http://localhost:8000/api/groups HTTP/1.1
 
 ###
-GET http://localhost:9000/api/posts/654465951cd5a5d435ed6c9c HTTP/1.1
+GET http://localhost:8000/api/groups/6557f54434d9297241077a2c HTTP/1.1
 
 ###
-PUT http://localhost:9000/api/posts/654465951cd5a5d435ed6c9c HTTP/1.1
+PUT http://localhost:8000/api/groups/6557f54434d9297241077a2c HTTP/1.1
 Content-Type: application/json
 
 {
-    "user_id": "02",
-    "title": "Oferta ",
-    "content": "Estamos buscando un ingeniero de software senior con experiencia en desarrollo de aplicaciones empresariales. El candidato ideal deberá tener experiencia en Java, Spring Framework y bases de datos SQL. ¡Únete a nuestro equipo y trabaja en proyectos desafiantes!",
-    "src_image": "https://ejemplo.com/imagen_oferta_trabajo.png",  
-    "comments": [
-        "Tengo experiencia en Java y Spring. ¿Cuál es el proceso de selección?",
-        "¿Cuál es el rango salarial para este puesto?"
-    ],
-    "status": true
+  "_id": "6557f54434d9297241077a2c",
+  "users": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F"
+  ],
+  "title": "Grupo Nuevito",
+  "image": "group_nuevito.jpg",
+  "description": "Grupo de los usuarios nóveles 2.0",
+  "status": true,
+  "__v": 0
 }
 
 ###
-DELETE http://localhost:9000/api/posts/6545186104de7610a7bd9bd3 HTTP/1.1
+DELETE http://localhost:8000/api/groups/6557f54434d9297241077a2c HTTP/1.1

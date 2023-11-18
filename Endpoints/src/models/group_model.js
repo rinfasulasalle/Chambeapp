@@ -22,4 +22,4 @@ const groupSchema = mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('group', groupSchema);
+module.exports = mongoose.model('groups', groupSchema);
