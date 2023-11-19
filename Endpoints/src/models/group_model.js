@@ -1,9 +1,11 @@
 const mongoose = require("mongoose");
 const groupSchema = mongoose.Schema({
-    users:{
-        type: Array,
-        required: true
-    },
+    users:[
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "users",
+        },
+    ],
     title:{
         type: String,
         require: true
