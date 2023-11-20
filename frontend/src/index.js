@@ -1,20 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import { Login } from './Login';
 import 'bootstrap/dist/css/bootstrap.min.css';
 //import reportWebVitals from './reportWebVitals';
-import './index.css';
 
-const htmlBody = document.body;
-htmlBody.className="text-center";
+//const htmlBody = document.body;
+//htmlBody.className="text-center";
 
-const body = ReactDOM.createRoot(htmlBody);
+const root = ReactDOM.createRoot(document.getElementById('root'));
 
-body.render(
+root.render(
   
   <React.StrictMode>
-    <Login/>
+    <App/>
   </React.StrictMode>
   
 );
